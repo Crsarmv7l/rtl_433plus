@@ -54,6 +54,18 @@ void reflect_nibbles(uint8_t message[], unsigned num_bytes);
 /// @return number of successfully unstuffed nibbles.
 unsigned extract_nibbles_4b1s(uint8_t const *message, unsigned offset_bits, unsigned num_bits, uint8_t *dst);
 
+/// Decrypt Keeloq encoded data with a keeloq key
+///
+/// @param data encrypted data
+/// @param key key to use when decoding
+uint32_t keeloq_common_decrypt(const uint32_t data, const uint64_t key);
+
+/// Create a per device MFR key
+///
+/// @param data encrypted data
+/// @param key MFR key to create per device key
+uint64_t normal(uint32_t data, const uint64_t key);
+
 /// UART "8n1" (10-to-8) decoder with 1 start bit (0), no parity, 1 stop bit (1), LSB-first bit-order.
 ///
 /// @param message bytes of message data
