@@ -300,6 +300,7 @@ add_library(r_433 STATIC
     devices/kiav0.c
     devices/kiav1.c
     devices/kiav2.c
+    devices/subaru.c
 )
 
 if("${CMAKE_C_COMPILER_ID}" STREQUAL "GNU" OR "${CMAKE_C_COMPILER_ID}" MATCHES "Clang")
