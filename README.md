@@ -10,8 +10,8 @@ Extra Decoders:
 - Subaru
 
 # Credits:
-- Wootini                      - Subaru bit mixing
-- Yougz                        - Kia v5 bit mixing
+- Wootini                      - Subaru bitmixing func
+- Yougz                        - Kia v5 alignment and bitmixing funcs
 - MMX (Flipper Unleashed)      - Keeloq normal func and Keeloq func
 - rtl_433 team				   - For a fantastic tool that can easily be extended
 
