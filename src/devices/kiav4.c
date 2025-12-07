@@ -60,31 +60,21 @@ static int kia_v4_decode(r_device *decoder, bitbuffer_t *bitbuffer)
     int serial         = (reverse8(b[7] & 0xf0) << 24) | (reverse8(b[6]) << 16) | (reverse8(b[5]) << 8) | (reverse8(b[4]));
     int btn            = ((reverse8(b[7]) & 0xF0) >> 4);
 
-    if (kia_3_4_mf_keys[0] == 0x00) {
-        char key_str[18];
-        snprintf(key_str, sizeof(key_str), "%08lX", key);
-        char yek_str[18];
-        snprintf(yek_str, sizeof(yek_str), "%08lX", yek);
-        char encrypted_str[9];
-        snprintf(encrypted_str, sizeof(encrypted_str), "%08X", encrypted);
-        char serial_str[9];
-        snprintf(serial_str, sizeof(serial_str), "%07X", serial);
-        char model_str[] = "Kia 3/4";
-    }
-    else {
-        char key_str[18];
-        snprintf(key_str, sizeof(key_str), "%08lX", key);
-        char yek_str[18];
-        snprintf(yek_str, sizeof(yek_str), "%08lX", yek);
-        char encrypted_str[9];
-        snprintf(encrypted_str, sizeof(encrypted_str), "%08X", encrypted);
-        char serial_str[9];
-        snprintf(serial_str, sizeof(serial_str), "%07X", serial);
-        char model_str[] = "Unknown Kia 3/4";
-        char decrypted_str[12];
-        snprintf(decrypted_str, sizeof(decrypted_str), "%s", "Unknown");
-        char mfkey_str[18];
-        snprintf(mfkey_str, sizeof(mfkey_str), "%s", "Unknown");
+    char key_str[18];
+    snprintf(key_str, sizeof(key_str), "%08lX", key);
+    char yek_str[18];
+    snprintf(yek_str, sizeof(yek_str), "%08lX", yek);
+    char encrypted_str[9];
+    snprintf(encrypted_str, sizeof(encrypted_str), "%08X", encrypted);
+    char serial_str[9];
+    snprintf(serial_str, sizeof(serial_str), "%07X", serial);
+    char model_str[] = "Unknown Kia 3/4";
+    char decrypted_str[12];
+    snprintf(decrypted_str, sizeof(decrypted_str), "%s", "Unknown");
+    char mfkey_str[18];
+    snprintf(mfkey_str, sizeof(mfkey_str), "%s", "Unknown");
+
+    if (kia_3_4_mf_keys[0] != 0x00) {
 
         for (size_t j = 0; j < 2; j++){ 
             uint32_t block = keeloq_common_decrypt(encrypted, kia_3_4_mf_keys[j]);
