@@ -5,7 +5,7 @@ Packet information is not included in the decoders to mitigate synthetic signal 
 # THIS IS PURELY A DECODER, it does not tx
 
 Extra Decoders:
-- Kia v0-v5 (V3/4 requires the user to source and enter MFR Keys before building)
+- Kia v0-v5 (v3/4 requires the user to source and enter MFR Keys before building otherwise it just recognizes the signal and does not decode)
 - Subaru
 
 # rtl_433
