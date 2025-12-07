@@ -68,14 +68,13 @@ static int kia_v4_decode(r_device *decoder, bitbuffer_t *bitbuffer)
     snprintf(encrypted_str, sizeof(encrypted_str), "%08X", encrypted);
     char serial_str[9];
     snprintf(serial_str, sizeof(serial_str), "%07X", serial);
-    char model_str[] = "Unknown Kia 3/4";
+    char model_str[] = "Kia 3/4";
     char decrypted_str[12];
     snprintf(decrypted_str, sizeof(decrypted_str), "%s", "Unknown");
     char mfkey_str[18];
     snprintf(mfkey_str, sizeof(mfkey_str), "%s", "Unknown");
 
     if (kia_3_4_mf_keys[0] != 0x00) {
-
         for (size_t j = 0; j < 2; j++){ 
             uint32_t block = keeloq_common_decrypt(encrypted, kia_3_4_mf_keys[j]);
             if (((uint8_t)(btn) == (uint8_t)(block >> 28)) && ((uint8_t)(serial & 0x00000FF)) == ((uint8_t)((block & 0x00FF0000) >> 16))) {
