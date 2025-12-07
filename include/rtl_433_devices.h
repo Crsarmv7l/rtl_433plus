@@ -298,6 +298,9 @@
     DECL(oria_wa150km) \
     DECL(ec3k) \
     DECL(orion_endpoint_2020) \
+    DECL(kia_v0) \
+    DECL(kia_v1) \
+    DECL(kia_v2) \
 
     /* Add new decoders here. */
 
