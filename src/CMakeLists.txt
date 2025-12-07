@@ -300,6 +300,7 @@ add_library(r_433 STATIC
     devices/kiav0.c
     devices/kiav1.c
     devices/kiav2.c
+    devices/kiav5.c
     devices/subaru.c
 )
 
