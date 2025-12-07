@@ -70,6 +70,32 @@ unsigned extract_nibbles_4b1s(uint8_t const *message, unsigned offset_bits, unsi
     return ret;
 }
 
+inline uint32_t keeloq_common_decrypt(const uint32_t data, const uint64_t key) {
+    uint32_t block = data;
+    uint64_t tkey = key;
+    for (size_t i = 0; i < 528; i++){
+        int lutkey = (((block >> 0) & 1) | ((block >> 7) & 2) | ((block >> 17) & 4) | ((block >> 22) & 8) | ((block >> 26) & 16));
+        int lsb = ((block >> 31) ^ (block >> 15 & 1) ^ (0x3A5C742E >> lutkey & 1) ^ (tkey >> 15 & 1));
+        block = (((block & 0x7FFFFFFF) << 1) | lsb);
+        tkey = (((tkey & 0x7FFFFFFFFFFFFFFF) << 1) | (tkey >> 63));
+    }
+    return block;
+}
+
+//modified from Flipper Zero Unleashed (I don't include btn in
+//in the serial)
+inline uint64_t normal(uint32_t data, const uint64_t key) {
+    uint32_t k1, k2;
+
+    data |= 0x20000000;
+    k1 = keeloq_common_decrypt(data, key);
+
+    data |= 0x60000000;
+    k2 = keeloq_common_decrypt(data, key);
+
+    return ((uint64_t)k2 << 32) | k1; 
+}
+
 unsigned extract_bytes_uart(uint8_t const *message, unsigned offset_bits, unsigned num_bits, uint8_t *dst)
 {
     unsigned ret = 0;
