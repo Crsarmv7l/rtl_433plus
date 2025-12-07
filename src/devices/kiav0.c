@@ -77,7 +77,7 @@ static int kia_v0_decode(r_device *decoder, bitbuffer_t *bitbuffer)
     uint8_t crc = (uint8_t)(final & 0x000000000000FF);
     
     char key_str[17];
-    snprintf(key_str, sizeof(key_str), "0F%08lX", final);
+    snprintf(key_str, sizeof(key_str), "%08lX", final);
     char count_str[5];
     snprintf(count_str, sizeof(count_str), "%04X", count);
     char serial_str[8];
@@ -91,7 +91,7 @@ static int kia_v0_decode(r_device *decoder, bitbuffer_t *bitbuffer)
     data_t *data = data_make(
             "model",            "",             DATA_STRING,    "Kia V0",
             "id",              "serial",        DATA_STRING,    serial_str,
-            "flipper key",      "",             DATA_STRING,    key_str,
+            "key",              "",             DATA_STRING,    key_str,
             "btn",              "",             DATA_STRING,    btn_str,
             "count",            "",             DATA_STRING,    count_str,
             "crc",              "",             DATA_STRING,    crc_str,
@@ -105,7 +105,7 @@ static int kia_v0_decode(r_device *decoder, bitbuffer_t *bitbuffer)
 static char const *const output_fields[] = {
         "model",
         "id",
-        "flipper key",
+        "key",
         "btn",
         "count",
         "crc",
