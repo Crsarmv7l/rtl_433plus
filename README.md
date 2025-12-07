@@ -4,7 +4,7 @@ Packet information is not included in the decoders to mitigate synthetic signal 
 
 # THIS IS PURELY A DECODER, it does not tx
 
-Decodes:
+Extra Decoders:
 - Kia v0-v5 (V3/4 requires the user to source and enter MFR Keys before building)
 - Subaru
 
