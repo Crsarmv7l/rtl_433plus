@@ -5,6 +5,8 @@
     The Pirates Plunder
     https://discord.gg/UYUYGUk8
 
+    v3/4 uses keeloq keys which I am not going to distribute
+    so the keeloq decoding function and keys have been stripped
 */
 
 #include "decoder.h"
