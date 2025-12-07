@@ -301,6 +301,8 @@
     DECL(kia_v0) \
     DECL(kia_v1) \
     DECL(kia_v2) \
+    DECL(kia_v4) \
+    DECL(kia_v4_fsk) \
     DECL(kia_v5_fsk) \
     DECL(subaru) \
 
