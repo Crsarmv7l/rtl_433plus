@@ -10,7 +10,7 @@
 */
 
 #include "decoder.h"
-                            //V4     V5
+                            //V4     V3
 uint64_t kia_3_4_mf_keys[] = {0x00, 0x00};
 
 static int kia_v4_decode(r_device *decoder, bitbuffer_t *bitbuffer)
