@@ -13,6 +13,7 @@ Extra Decoders:
 - Wootini                      - Subaru bit mixing
 - Yougz                        - Kia v5 bit mixing
 - MMX (Flipper Unleashed)      - Keeloq normal func and Keeloq func
+- rtl_433 team				   - For a fantastic tool that can easily be extended
 
 # rtl_433
 
