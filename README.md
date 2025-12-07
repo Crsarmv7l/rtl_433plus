@@ -6,7 +6,7 @@ Packet information is not included in the decoders to mitigate synthetic signal 
 
 Extra Decoders:
 - Kia v0-v5 (v3/4 requires the user to source and enter MFR Keys before building otherwise it just recognizes the signal and does not decode)
-- v0 is also used by older Mitsubishi and Suzuki with a different CRC calc. As I don't check CRC, those will also be shown under "Kia v0"
+- v0 is also used by older Mitsubishi and Suzuki with a different CRC calc. As I don't check CRC, those may also be shown under "Kia v0"
 - Subaru
 
 # Credits:
