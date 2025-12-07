@@ -4,6 +4,10 @@
     By L0rdDiakon 
     The Pirates Plunder
     https://discord.gg/UYUYGUk8
+
+    Based on initial bit decoding by myself,
+    and complete reimplement of bit mixing
+    and all other functions by Yougz. Fanastic work YougZ!
     
 */
 
