@@ -9,6 +9,11 @@ Extra Decoders:
 - v0 is also used by older Mitsubishi and Suzuki with a different CRC calc. As I don't check CRC, those will also be shown under "Kia v0"
 - Subaru
 
+# Credits:
+Wootini                      - Subaru bit mixing
+Yougz                        - Kia v5 bit mixing
+MMX (Flipper Unleashed)      - Keeloq normal func and Keeloq func
+
 # rtl_433
 
 rtl_433 (despite the name) is a generic data receiver, mainly for the 433.92 MHz, 868 MHz (SRD), 315 MHz, 345 MHz, and 915 MHz ISM bands.
