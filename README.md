@@ -1,6 +1,6 @@
 # Fork of rtl_433 that adds some Car keyfob decoders
 You must build it yourself, its not hard at all. 
-Packet information is not included in the decoders to mitigate signal creation. 
+Packet information is not included in the decoders to mitigate synthetic signal creation. 
 
 # rtl_433
 
