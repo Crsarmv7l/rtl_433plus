@@ -1,6 +1,12 @@
 # Fork of rtl_433 that adds some Car keyfob decoders
 You must build it yourself, its not hard at all. 
-Packet information is not included in the decoders to mitigate synthetic signal creation. 
+Packet information is not included in the decoders to mitigate synthetic signal creation.
+
+#THIS IS PURELY A DECODER, it is not a transmitter
+
+Decodes:
+- Kia v0-v2 and v5 (V3/4 is identified but not decoded)
+- Subaru
 
 # rtl_433
 
