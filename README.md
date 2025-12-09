@@ -8,10 +8,11 @@ Extra Decoders:
 - Kia v0-v5 (v3/4 requires the user to source and enter MFR Keys before building otherwise it just recognizes the signal and does not decode)
 - v0 is also used by older Mitsubishi and Suzuki with a different CRC calc. As I don't check CRC, those may also be shown under "Kia v0"
 - Subaru
+- Ford v0
 
 # Credits:
 - Wootini                      - Subaru bitmixing func
-- Yougz                        - Kia v5 alignment and bitmixing funcs
+- Yougz                        - Kia v5 alignment and bitmixing funcs / Ford v0 decoding python params
 - MMX (Flipper Unleashed)      - Keeloq normal func and Keeloq func
 - rtl_433 team				   - For a fantastic tool that can easily be extended
 
